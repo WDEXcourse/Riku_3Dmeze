@@ -9,7 +9,7 @@ public class PlayerMove : MonoBehaviour
     {
 
     }
-
+    public Rigidbody rb;
     // Update is called once per frame
     void Update()
     {
@@ -25,9 +25,14 @@ public class PlayerMove : MonoBehaviour
             transform.Rotate(0, 5, 0);
         }
 
-        if (Input.GetKey ("left"))
+        if (Input.GetKey ("left")) //Input.GetKey (KeyCode.LeftArrow)
         {
             transform.Rotate(0, -5, 0);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.AddForce(0, 5, 0,ForceMode.Impulse);
         }
     }
 }
