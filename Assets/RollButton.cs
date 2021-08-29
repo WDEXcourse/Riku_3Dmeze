@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class RollButton : MonoBehaviour
 {
+    public GameObject RollBall;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,4 +16,13 @@ public class NewBehaviourScript : MonoBehaviour
     {
         
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            RollBall.SetActive(true);
+        }
+        
+    }
 }
+    

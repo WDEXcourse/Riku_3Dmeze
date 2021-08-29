@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
+    bool isGround;
     // Start is called before the first frame update
     void Start()
     {
-
+        isGround = false;
     }
     public Rigidbody rb;
     // Update is called once per frame
@@ -32,7 +33,19 @@ public class PlayerMove : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            rb.AddForce(0, 5, 0,ForceMode.Impulse);
+            if (isGround == true)
+            {
+                isGround = false;
+                rb.AddForce(0, 5, 0, ForceMode.Impulse);
+            }
+            
+        }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            isGround = true;
         }
     }
 }
