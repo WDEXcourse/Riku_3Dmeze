@@ -683,3 +683,19 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 5276.204641 seconds.
+  path: Assets/rubbishbox.obj
+  artifactKey: Guid(99032da809b514187a8792e1a6998da8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/rubbishbox.obj using Guid(99032da809b514187a8792e1a6998da8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b95fce9feb9055bbec04ebab1fd0e11') in 0.533999 seconds 
+  Import took 0.577226 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000446 seconds.
+  path: Assets/rubbishbox.png
+  artifactKey: Guid(80d32b6f212a3417093de24bb9b9ce60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/rubbishbox.png using Guid(80d32b6f212a3417093de24bb9b9ce60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '174381a0a23c1eaeef71a0ddd86b9ab1') in 0.050840 seconds 
+  Import took 0.058448 seconds .
+
