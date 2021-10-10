@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     bool isGround;
+    string item;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +47,12 @@ public class PlayerMove : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             isGround = true;
+        }
+        if (collision.gameObject.tag == "rubbish")
+        {
+            item = collision.gameObject.name;
+            print(item);
+            Destroy(collision.gameObject);
         }
     }
 }
