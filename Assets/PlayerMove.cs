@@ -54,5 +54,13 @@ public class PlayerMove : MonoBehaviour
             print(item);
             Destroy(collision.gameObject);
         }
+        if (collision.gameObject.tag == "GarbageCan")
+        {
+            if (collision.gameObject.name == item)
+            {
+                print("ok");
+            }
+            
+        }
     }
 }
