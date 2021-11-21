@@ -59,6 +59,7 @@ public class PlayerMove : MonoBehaviour
             if (collision.gameObject.name == item)
             {
                 print("ok");
+                item = "";
             }
             
         }
