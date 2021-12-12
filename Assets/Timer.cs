@@ -5,14 +5,16 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    float countTime = 300;
+    float countTime;
     public Image timeimeage;
-
+    public float limitTime = 300;
 
     // Use this for initialization
     void Start()
     {
         timeimeage.color = Color.green;
+
+        countTime = limitTime;
     }
 
     // Update is called once per frame
@@ -25,13 +27,13 @@ public class Timer : MonoBehaviour
 
         GetComponent<Text>().text = countTime.ToString("F0");
 
-        timeimeage.fillAmount = countTime/300;
+        timeimeage.fillAmount = countTime/limitTime;
 
-        if (countTime < 30)
+        if (timeimeage.fillAmount < 0.1f)
         {
             timeimeage.color = Color.red;
         }
-        else if (countTime < 150)
+        else if (timeimeage.fillAmount < 0.5f)
         {
             timeimeage.color = Color.yellow;
         }
