@@ -6,10 +6,12 @@ public class PlayerMove : MonoBehaviour
 {
     bool isGround;
     string item;
+    Vector3 startPos;
     // Start is called before the first frame update
     void Start()
     {
         isGround = false;
+        startPos = transform.position;
     }
     public Rigidbody rb;
     // Update is called once per frame
@@ -47,6 +49,10 @@ public class PlayerMove : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             isGround = true;
+        }
+        if (collision.gameObject.name == "RollBall")
+        {
+            transform.position = startPos;
         }
         if (collision.gameObject.tag == "rubbish")
         {
