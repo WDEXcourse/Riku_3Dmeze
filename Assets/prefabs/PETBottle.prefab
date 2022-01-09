@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 1846632679036814705}
   - component: {fileID: 1846632679035848625}
   - component: {fileID: 1846632679037852016}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PETBottles
-  m_TagString: rubbish
+  m_TagString: Pet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,9 +104,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8736431354354983329}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PETBottle
-  m_TagString: Untagged
+  m_TagString: Pet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

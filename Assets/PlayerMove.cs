@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     bool isGround;
+    [SerializeField]
     string item;
     Vector3 startPos;
     // Start is called before the first frame update
@@ -54,9 +55,9 @@ public class PlayerMove : MonoBehaviour
         {
             transform.position = startPos;
         }
-        if (collision.gameObject.tag == "rubbish")
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Rubbish")&&item == "")
         {
-            item = collision.gameObject.name;
+            item = collision.gameObject.tag;
             print(item);
             Destroy(collision.gameObject);
         }
