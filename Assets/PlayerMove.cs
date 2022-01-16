@@ -1,18 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class PlayerMove : MonoBehaviour
 {
     bool isGround;
     [SerializeField]
     string item;
     Vector3 startPos;
+    public Text popup;
     // Start is called before the first frame update
     void Start()
     {
         isGround = false;
         startPos = transform.position;
+        popup.text = "";
     }
     public Rigidbody rb;
     // Update is called once per frame
@@ -61,9 +63,10 @@ public class PlayerMove : MonoBehaviour
             print(item);
             Destroy(collision.gameObject);
         }
-        if (collision.gameObject.tag == "GarbageCan")
+        if (collision.gameObject.layer == LayerMask.NameToLayer("GarbageCan"))
         {
-            if (collision.gameObject.name == item)
+            popup.text = "ゴミを捨てますか？";
+            if (collision.gameObject.tag == item)
             {
                 print("ok");
                 item = "";
