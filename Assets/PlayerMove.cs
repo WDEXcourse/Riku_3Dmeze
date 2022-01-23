@@ -20,19 +20,19 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("up"))
+        if (Input.GetKey(KeyCode.W))
         {
 
             transform.position += transform.forward * 0.1f;
 
         }
 
-        if (Input.GetKey("right"))
+        if (Input.GetKey(KeyCode.D))
         {
             transform.Rotate(0, 5, 0);
         }
 
-        if (Input.GetKey ("left")) //Input.GetKey (KeyCode.LeftArrow)
+        if (Input.GetKey(KeyCode.A)) //Input.GetKey (KeyCode.LeftArrow)
         {
             transform.Rotate(0, -5, 0);
         }
@@ -44,8 +44,9 @@ public class PlayerMove : MonoBehaviour
                 isGround = false;
                 rb.AddForce(0, 5, 0, ForceMode.Impulse);
             }
-            
+
         }
+
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -57,7 +58,7 @@ public class PlayerMove : MonoBehaviour
         {
             transform.position = startPos;
         }
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Rubbish")&&item == "")
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Rubbish") && item == "")
         {
             item = collision.gameObject.tag;
             print(item);
@@ -66,12 +67,41 @@ public class PlayerMove : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("GarbageCan"))
         {
             popup.text = "ゴミを捨てますか？";
-            if (collision.gameObject.tag == item)
-            {
-                print("ok");
-                item = "";
-            }
+
+        }
+
+    }
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("GarbageCan"))
+        {
             
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                if (collision.gameObject.tag == item)
+                {
+                    popup.text = "ゴミを捨てた!";
+                    item = "";
+                }
+                else if(item == "")
+                {
+                   
+                   
+                }
+                else
+                {
+                    popup.text = "捨てられない!";
+                }
+                
+            }
+
+        }
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("GarbageCan"))
+        {
+            popup.text = "";
         }
     }
 }
