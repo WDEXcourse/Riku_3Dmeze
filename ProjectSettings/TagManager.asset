@@ -10,6 +10,7 @@ TagManager:
   - Can
   - Pet
   - Fishborn
+  - Elevator
   layers:
   - Default
   - TransparentFX

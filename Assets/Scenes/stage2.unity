@@ -6886,7 +6886,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 907615236}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.365267, y: 1.8299999, z: -2.0049334}
+  m_LocalPosition: {x: 9.365267, y: 1.91, z: -2.0049334}
   m_LocalScale: {x: 10, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 1035322404}
@@ -10388,7 +10388,7 @@ GameObject:
   - component: {fileID: 1354373373}
   - component: {fileID: 1354373372}
   m_Layer: 0
-  m_Name: Elevator
+  m_Name: l
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10823,9 +10823,10 @@ GameObject:
   - component: {fileID: 1417899806}
   - component: {fileID: 1417899805}
   - component: {fileID: 1417899804}
+  - component: {fileID: 1417899808}
   m_Layer: 0
-  m_Name: Elevator (1)
-  m_TagString: Untagged
+  m_Name: Elevator
+  m_TagString: Elevator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10900,12 +10901,31 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1417899803}
   m_LocalRotation: {x: -0.7047452, y: -0, z: -0, w: 0.70946056}
-  m_LocalPosition: {x: 0.17, y: 11.1, z: 10.3}
+  m_LocalPosition: {x: 0.17, y: 10.83, z: 10.23}
   m_LocalScale: {x: 10, y: 2.864009, z: 0.40746}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: -89.618, y: 0, z: 0}
+--- !u!95 &1417899808
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417899803}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d130efb2d831d4d178b9468996954483, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1418154832 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: adc53a363f17c4249a1e8c90787d4842,

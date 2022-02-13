@@ -69,6 +69,10 @@ public class PlayerMove : MonoBehaviour
             popup.text = "ゴミを捨てますか？";
 
         }
+        if (collision.gameObject.name == "Elevator")
+        {
+            this.transform.parent = collision.gameObject.transform;
+        }
 
     }
     private void OnCollisionStay(Collision collision)
@@ -102,6 +106,10 @@ public class PlayerMove : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("GarbageCan"))
         {
             popup.text = "";
+        }
+        if (collision.gameObject.name == "Elevator")
+        {
+            this.transform.parent = null;
         }
     }
 }
