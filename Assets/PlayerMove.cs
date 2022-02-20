@@ -9,12 +9,14 @@ public class PlayerMove : MonoBehaviour
     string item;
     Vector3 startPos;
     public Text popup;
+    public Text goaltext;
     // Start is called before the first frame update
     void Start()
     {
         isGround = false;
         startPos = transform.position;
         popup.text = "";
+        goaltext.text = "";
     }
     public Rigidbody rb;
     // Update is called once per frame
@@ -72,6 +74,11 @@ public class PlayerMove : MonoBehaviour
         if (collision.gameObject.name == "Elevator")
         {
             this.transform.parent = collision.gameObject.transform;
+        }
+        if (collision.gameObject.name == "Goal")
+        {
+            goaltext.text = "ゴール！";
+            this.enabled = false; 
         }
 
     }

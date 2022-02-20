@@ -11,6 +11,7 @@ TagManager:
   - Pet
   - Fishborn
   - Elevator
+  - Goal
   layers:
   - Default
   - TransparentFX
